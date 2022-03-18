@@ -20,13 +20,11 @@ kiali_route_url: ""
 
 istio_namespace: "" # default is where Kiali is installed
 
-# auth:
-#   strategy: openid
-#   openid:
-#     client_id: "kiali"
-#     disable_rbac: true
-#     issuer_uri: "https://keycloak.kubernetes.docker.internal/auth/realms/istio"
-#   openshift: {}
+auth:
+  openid: {}
+  openshift: {}
+  strategy: ""
+
 
 deployment:
   # This only limits what Kiali will attempt to see, but Kiali Service Account has permissions to see everything.
